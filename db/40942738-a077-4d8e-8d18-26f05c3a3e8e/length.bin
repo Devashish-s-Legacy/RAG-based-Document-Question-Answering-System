@@ -1,9 +1,0 @@
- 0`` is 0.
-    exact : bool, optional
-        If ``exact`` is set to True, calculate the answer exactly using
-        integer arithmetic, otherwise use above approximation (faster,
-        but yields floats instead of integers).
-        Default is False.
-    extend : string, optional
-        One of ``'zero'`` or ``'complex'``; this determines how values ``n<0``
-        are handled - by default the
