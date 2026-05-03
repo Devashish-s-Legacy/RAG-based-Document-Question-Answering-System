@@ -35,7 +35,7 @@ def ingest_docs():
         persist_directory="db"
     )
 
-    print("✅ Ingestion complete!")
+    print(" Ingestion complete!")
 
 
 if __name__ == "__main__":
