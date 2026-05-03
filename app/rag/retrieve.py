@@ -2,7 +2,7 @@ from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
 def get_retriever():
-    # ✅ Define embeddings properly
+    #  Define embeddings properly
     embeddings = HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2"
     )
