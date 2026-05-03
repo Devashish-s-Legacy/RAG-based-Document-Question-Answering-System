@@ -6,3 +6,10 @@ db/
 .vscode/
 .streamlit/
 *.log
+node_modules/
+frontend/node_modules/
+.env
+__pycache__/
+*.pyc
+db/
+*.sqlite3
