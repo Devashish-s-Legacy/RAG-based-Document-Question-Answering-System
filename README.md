@@ -1,7 +1,7 @@
-RAG-based-Document-Question-Answering-System
+## RAG-based-Document-Question-Answering-System
 A full-stack AI application that enables users to upload documents (PDFs) and ask natural language questions. The system uses Retrieval-Augmented Generation (RAG) to provide accurate, context-aware answers based on document content.
 
-Features
+## Features
 Upload and process multiple PDF documents
 Semantic search using vector embeddings
 Context-aware answer generation using LLMs
@@ -11,7 +11,7 @@ Evaluation endpoint for response analysis
 Prompt engineering to reduce hallucinations
 Logging, error handling, and validation
 
-How It Works
+## How It Works
 User Query
    ↓
 Retriever (ChromaDB + Embeddings)
@@ -28,7 +28,7 @@ Retrieves relevant document chunks using semantic similarity
 Injects them into the prompt
 Generates grounded responses using an LLM
 
-Architecture
+## Architecture
 Frontend (Streamlit / React)
         ↓
 FastAPI Backend
@@ -39,7 +39,7 @@ RAG Pipeline
    ├── Retrieval (ChromaDB)
    └── Generation (LLM)
 
-Tech Stack
+## Tech Stack
 Backend: FastAPI
 Frontend: Streamlit / React
 AI Framework: LangChain
@@ -48,7 +48,7 @@ Embeddings: HuggingFace (all-MiniLM-L6-v2)
 LLM: OpenAI / Gemini / Local (Ollama)
 Language: Python
 
-Project Structure
+## Project Structure
 app/
  ├── main.py
  ├── api/
@@ -75,7 +75,7 @@ data/
 
 db/
 
-Setup Instructions
+## Setup Instructions
 
 1. Clone Repository
 git clone <your-repo-url>
@@ -93,7 +93,19 @@ streamlit run app/frontend/app.py
 | `/eval`   | GET    | Evaluate system responses    |
 | `/health` | GET    | Check API status             |
 
-Example Request
+## Frontend (React)
+
+- Built with React
+- Axios for API calls
+- Upload + Query UI
+
+Run frontend:
+cd frontend
+npm install
+npm start
+
+
+## Example Request
 POST /ask
 {
   "query": "What is this document about?"
@@ -107,26 +119,26 @@ Example Response
   "confidence": 0.8
 }
 
-Key Concepts
+## Key Concepts
 Retrieval-Augmented Generation (RAG)
 Semantic Search & Vector Embeddings
 Prompt Engineering
 LLM Integration
 Modular Backend Design
 
-Future Improvements
+## Future Improvements
 Add chat memory (conversation context)
 Implement hybrid search (BM25 + vector)
 Add reranking for better retrieval
 Deploy using Docker + cloud (Render/AWS)
 Improve UI with full React frontend
 
-Motivation
+## Motivation
 
 Traditional LLMs rely only on pretrained knowledge.
 This system enhances accuracy by grounding responses in user-provided documents, making it more reliable for real-world use cases.
 
-Acknowledgements
+## Acknowledgements
 LangChain
 HuggingFace
 ChromaDB
